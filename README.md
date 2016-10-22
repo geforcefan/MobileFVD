@@ -1,5 +1,5 @@
 ﻿####################
-# MobileFVD++ v0.1 alpha #
+# MobileFVD v0.1 alpha #
 ####################
 
 Ercan Akyürek (geforcefan), 2016, ercan.akyuerek@gmail.com
