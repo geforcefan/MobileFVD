@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="FVD.UI.EditCreateTrack"
+		Title="New Track">
+	
+	<ContentPage.ToolbarItems>
+  		<ToolbarItem x:Name="ButtonCancel" Name="Cancel" Clicked="OnTrackCancel" Order="Primary" Priority="0"></ToolbarItem>
+  		<ToolbarItem x:Name="ButtonSave" Name="Save" Clicked="OnTrackSave" Order="Primary" Priority="1"></ToolbarItem>
+	</ContentPage.ToolbarItems>	
+
+	<ContentPage.Content>
+		<TableView x:Name="GeneralSettings" Intent="Settings">
+		    <TableRoot>
+		        <TableSection Title="General">
+		            <EntryCell 
+						x:Name="InputName" 
+						Label="Name" 
+						Placeholder="Track Name" 
+						Text="{Binding Name, Mode=OneWay}"
+						/>
+		            <EntryCell 
+						x:Name="InputDescription"
+						Label="Description"
+						Placeholder="Please enter a description"
+						Text="{Binding Description, Mode=OneWay}" />
+		        </TableSection>
+		        <TableSection Title="Track Settings">
+		            <SwitchCell 
+						x:Name="DrawTrack" 
+						Text="Draw Track"
+						On="{Binding DrawTrack, Mode=OneWay}"
+						/>
+		            <SwitchCell 
+						x:Name="DrawHeartline" 
+						Text="Draw Heartline"
+						On="{Binding DrawHeartline, Mode=OneWay}"
+						/>
+		        </TableSection>
+		    </TableRoot>
+		</TableView>
+	</ContentPage.Content>
+</ContentPage>

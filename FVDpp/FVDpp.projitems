@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{466DF310-4DBD-408B-92D7-E84547B68190}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FVDpp</Import_RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\ProjectsUserInterface\EditCreateProject.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\ProjectsUserInterface\ProjectOverview.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\ProjectsUserInterface\ProjectsOverview.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\TracksUserInterface\EditCreateTrack.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\FloorFragment.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\FloorVertex.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\TrackFragment.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\TrackVertex.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\TrackSectionPickerFragment.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Shaders\TrackSectionPickerVertex.glsl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TrackView\MainView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TrackView\SectionParameter\FunctionsList\FunctionsListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Database.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Global.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Misc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\geometric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\mat4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\matrix.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\matrix_transform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\quaternion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\trigonometric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\vec2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\vec3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlmNet\vec4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\MNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Project.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Projects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Track.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ProjectService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\TrackService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ProjectsUserInterface\EditCreateProject.xaml.cs">
+      <DependentUpon>EditCreateProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ProjectsUserInterface\ProjectOverview.xaml.cs">
+      <DependentUpon>ProjectOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ProjectsUserInterface\ProjectsOverview.xaml.cs">
+      <DependentUpon>ProjectsOverview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\TracksUserInterface\EditCreateTrack.xaml.cs">
+      <DependentUpon>EditCreateTrack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ShaderProgram.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VertexTypes\DefaultVertex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VertexTypes\AttributePointers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\VertexObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Native\NativeOpenGLView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Texture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Camera\FreeCamera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Camera\Camera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VertexTypes\FloorVertex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gestures\RecognizerState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gestures\GestureRecognizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gestures\PanGestureRecognizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gestures\PitchGestureRecognizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gestures\RotationGestureRecognizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gestures\TapGestureRecognizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Section\Section.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Section\SectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Section\SectionStraight.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Section\SectionArgument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Section\SectionOrientation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Function\Function.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Function\FunctionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Function\SubFunction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Function\FunctionDegree.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderer\Track.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VertexTypes\TrackVertex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Section\SectionForce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VertexTypes\TrackSectionPickerVertex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Renderer\TrackSectionPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\MainView.TrackHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Renderer\Floor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gestures\LongPressGestureRecognizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\MainView.SectionHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Camera\CameraManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\MainView.CameraHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Camera\POVCamera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\SectionParameter\FunctionsList\FunctionListView.xaml.cs">
+      <DependentUpon>FunctionsListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\SectionParameter\FunctionsList\FunctionListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\SectionParameter\SectionParameterView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackView\SectionParameter\SectionParameterStraightView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)VertexTypes\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Native\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Camera\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Gestures\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\Section\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\Function\" />
+    <Folder Include="$(MSBuildThisFileDirectory)TrackView\" />
+    <Folder Include="$(MSBuildThisFileDirectory)TrackView\SectionParameter\" />
+    <Folder Include="$(MSBuildThisFileDirectory)TrackView\SectionParameter\FunctionsList\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	Title="Projects" 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:FVDpp" 
+	x:Class="FVD.UI.ProjectsOverview"
+>
+	<ContentPage.ToolbarItems>
+  		<ToolbarItem Name="New" Clicked="OnProjectNew" Command="{Binding CreateNewScopeCommand}" Order="Primary" Priority="1"></ToolbarItem>
+	</ContentPage.ToolbarItems>	
+	
+	<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+	    <SearchBar Placeholder="Search Project..." TextChanged="SearchBarOnChanged"></SearchBar>
+		<ListView x:Name="ProjectsView" ItemSelected="OnProjectSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding Name}" Detail="{Binding Description}">
+						<TextCell.ContextActions>
+							<MenuItem 
+									Clicked="OnProjectEdit" 
+									CommandParameter="{Binding .}"
+									Text="Edit" 
+									/>
+							<MenuItem 
+									Clicked="OnProjectDelete" 
+									CommandParameter="{Binding .}"
+									Text="Delete" 
+									IsDestructive="True" />
+							</TextCell.ContextActions>
+					</TextCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+
+</ContentPage>

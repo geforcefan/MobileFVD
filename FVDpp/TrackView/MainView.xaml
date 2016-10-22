@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FVD.TrackView.MainView">
+	<ContentPage.Content>
+		<AbsoluteLayout Opacity="1" x:Name="InsideLayout">
+			<StackLayout x:Name="LoadinIndicator" AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional, HeightProportional" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+				<ActivityIndicator IsRunning="true" />
+				<Label Margin="20, 20, 20, 20" HorizontalTextAlignment="Center" Text="Preparing 3D Renderer..." />
+			</StackLayout>
+
+			<StackLayout x:Name="GLLayer" AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" Margin="0, 0, 0, 100" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional, HeightProportional" />
+
+			<StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutBounds="10, 10, 30, 30">
+				<Button Style="{StaticResource roundButton}" Clicked="OnChangeCamera" HorizontalOptions="EndAndExpand" Text="C" />
+			</StackLayout>
+
+			<StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutBounds="50, 15, 130, 30">
+				<Label x:Name="FPS"/>
+			</StackLayout>
+			
+			<!--
+			<StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1, 1, 1, 50" BackgroundColor="#33000000" Padding="10" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+				<Button Style="{StaticResource roundButton}" Clicked="OnNewSectionClicked" HorizontalOptions="EndAndExpand" Text="+" />
+			</StackLayout>
+			-->
+			
+			<StackLayout x:Name="SectionProperties" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="1, 1, 1, 90" HeightRequest="90" Margin="0, 0, 0, 0" BackgroundColor="#33000000" Padding="0" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+				
+			</StackLayout>
+		
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>
