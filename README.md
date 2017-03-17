@@ -1,19 +1,13 @@
-﻿####################
-# MobileFVD v0.1 alpha #
-####################
+# MobileFVD v0.1 alpha
 
 Ercan Akyürek (geforcefan), 2016, ercan.akyuerek@gmail.com
 
-#########
-# Intro #
-#########
+# Intro
 
 Welcome to MobileFVD, a mobile FVD tool which is a reengineered version of openFVD by Stephan (Lenny) Alt.
 This tool is still under development with little functionality.
 
-#############
-# Changelog #
-#############
+# Changelog
 
 v0.1 alpha:
 - managing projects
@@ -24,30 +18,23 @@ v0.1 alpha:
 - section settings added with little functionality
 
 
-###################
-# What do I need? #
-###################
+# What do I need?
 
-#### Xamarin Studio, Xamarin for Visual Studio ####
+## Xamarin Studio, Xamarin for Visual Studio
+
 - This projects uses the xamarin.forms framework (https://www.xamarin.com/forms)
 - nothing special needed.
 
 
-###################
-# Official discussion thread #
-###################
+# Official discussion thread 
 
 http://forum.nolimits-exchange.com/comments.php?DiscussionID=4968
 
-#############
-# Thanks to #
-#############
+# Thanks to
 
 - Stephan (Lenny) Alt for creating openFVD
 
-#######################
-# License information #
-#######################
+# License information 
 
 MobileFVD
 Copyright (C) 2016, Ercan Akyürek <ercan.akyuerek@gmail.com>
